@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>عيد ميلاد سعيد 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- شاشة الباسورد -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <div class="gift">🎁</div>
+
+            <h1>في مفاجأة مستنياكي 💖</h1>
+
+            <p>
+                عشان تفتحي المفاجأة<br>
+                اكتبي الباسورد ✨
+            </p>
+
+            <input
+                id="password"
+                type="text"
+                placeholder="اكتبي الباسورد"
+                autocomplete="off"
+            >
+
+            <button onclick="checkPassword()">
+                افتحي المفاجأة 💝
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- شاشة العد التنازلي -->
+    <div id="countdownPage" class="countdown-page">
+        <div id="fallingFlowers"></div>
+        <div class="countdown-content">
+            <div id="countdown">3</div>
+            <p>استني المفاجأة... 🌹❤️</p>
+        </div>
+    </div>
+
+
+    <!-- صفحة عيد الميلاد -->
+    <div id="birthdayPage" class="birthday-page">
+
+
+        <div class="birthday-content">
+
+            <div class="cake">🎂</div>
+
+            <p class="top-text">
+                النهارده يوم مميز جدًا ❤️
+            </p>
+
+            <h1>
+                Happy Birthday 🎉
+            </h1>
+
+            <h2>
+                15 سنة 🎂
+            </h2>
+
+            <div class="line"></div>
+
+            <p class="main-message">
+
+                كل سنة وإنتِ طيبة وبخير وسعادة ❤️
+
+                <br><br>
+
+                النهارده بقي عندك 15 سنة 🎂
+                وسنة جديدة بدأت من حياتك،
+                وإن شاء الله تكون أجمل سنة في حياتك ✨
+
+                <br><br>
+
+                أتمنى تفضلي دايمًا مبسوطة،
+                وتحققي كل أحلامك وطموحاتك 💕
+
+            </p>
+
+
+            <!-- حلمها -->
+            <div class="card">
+
+                <div class="card-icon">👩‍💻</div>
+
+                <h3>حلم المستقبل</h3>
+
+                <p>
+                    نفسها تبقى
+                    <strong>مهندسة</strong>
+                    👩‍🔧✨
+
+                    <br><br>
+
+                    وإن شاء الله تحقق حلمها
+                    وتبقى أحسن مهندسة في الدنيا ❤️
+                </p>
+
+            </div>
+
+
+            <!-- الآيس كوفي -->
+            <div class="card">
+
+                <div class="card-icon">🧋</div>
+
+                <h3>حاجة بتحبها</h3>
+
+                <p>
+                    بتحب
+                    <strong>الآيس كوفي</strong>
+                    🧋🤎
+
+                    <br><br>
+
+                    لأن اليوم من غير آيس كوفي
+                    مش بيبقى يوم كامل 😂❤️
+                </p>
+
+            </div>
+
+
+            <!-- رسالة -->
+            <div class="special-card">
+
+                <div class="heart">💌</div>
+
+                <h3>رسالة ليكي</h3>
+
+                <p>
+
+                    مهما الدنيا حصل فيها،
+                    خليكي دايمًا مبتسمة ❤️
+
+                    <br><br>
+
+                    وحطي أحلامك قدام عينك
+                    ومتوقفيش لحد ما تحققيها ✨
+
+                </p>
+
+            </div>
+
+
+            <!-- الكلام الجديد -->
+            <div class="special-card">
+
+                <div class="heart">💗</div>
+
+                <h3>Happy Birthday Loly 💗</h3>
+
+                <p>
+                    Happy birthday to the most beautiful girl I've ever seen 💗
+                    <br><br>
+
+                    The best smile I've ever seen 💗
+                    <br><br>
+
+                    On your birthday, I wish you a wonderful day and a sweet new year, just like you 💗
+                    <br><br>
+
+                    I'm always here for you if you need me, and every year you become the most beautiful girl 💗
+                    <br><br>
+
+                    Happy Birthday to you, Loly 💗
+                </p>
+
+            </div>
+
+
+            <!-- لو زهقانة -->
+            <div class="call-me">
+
+                <span>📞</span>
+
+                <h2>
+                    لو زهقانة كلميني ❤️
+                </h2>
+
+                <p>
+                    أنا موجود دايمًا 🥹💕
+                </p>
+
+            </div>
+
+
+            <!-- الأغنية -->
+            <div class="music-box">
+
+                <h3>🎶 أغنية عيد الميلاد 🎶</h3>
+
+                <audio
+                    id="backgroundMusic"
+                    controls
+                    loop
+                    preload="auto"
+                >
+                    <source src="music.mp3" type="audio/mpeg">
+                    <source src="tul8te.mp3" type="audio/mpeg">
+
+                    المتصفح لا يدعم تشغيل الأغنية.
+                </audio>
+
+                <p>
+                    لو الأغنية ما اشتغلتش تلقائيًا، دوسي ▶️ ❤️
+                </p>
+
+            </div>
+
+
+            <!-- المفاجأة الأخيرة -->
+            <button
+                class="surprise-button"
+                onclick="showExtraMessage()"
+            >
+                عندي حاجة كمان ليكي 👀💖
+            </button>
+
+
+            <div
+                id="extraMessage"
+                class="extra-message"
+            >
+
+                🎂💗
+
+                <p>
+
+                    Happy 15th Birthday!
+
+                    <br><br>
+
+                    خلي السنة دي مختلفة،
+                    مليانة ضحك وفرحة ونجاح
+                    وأحلى ذكريات ✨
+
+                    <br><br>
+
+                    وإن شاء الله أشوفك
+                    مهندسة قد الدنيا 👩‍💻❤️
+
+                    <br><br>
+
+                    🧋❤️👩‍💻
+
+                </p>
+
+            </div>
+
+
+            <div class="footer">
+                Made with ❤️ مخصوص ليكي
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

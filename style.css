@@ -1,0 +1,826 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #ead7ff
+        );
+
+    color: #54254f;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   شاشة الباسورد
+========================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #ead7ff
+        );
+}
+
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 40px 25px;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.15);
+}
+
+
+.gift {
+
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.login-box h1 {
+
+    color: #d44886;
+
+    margin-bottom: 15px;
+
+}
+
+
+.login-box p {
+
+    color: #666;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+#password {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #e5a3c1;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 18px;
+
+}
+
+
+.login-box button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #d44886;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+#error {
+
+    color: red;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   العداد
+========================= */
+
+.countdown-page {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    min-height: 100vh;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    z-index: 100;
+
+    overflow: hidden;
+
+    /* الخلفية الحمراء */
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ff6666,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #b00000,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ff2020,
+            #8b0000
+        );
+}
+
+
+.countdown-content {
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+#countdown {
+
+    font-size:
+        clamp(100px, 20vw, 170px);
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px white,
+        0 0 40px rgba(255,255,255,0.6);
+
+    animation:
+        countdownPulse 1s ease-in-out;
+}
+
+
+.countdown-content p {
+
+    color: white;
+
+    font-size: 23px;
+
+    margin-top: 10px;
+
+}
+
+
+@keyframes countdownPulse {
+
+    0% {
+        transform: scale(0.6);
+        opacity: 0.2;
+    }
+
+    60% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   الورد والقلوب الكتير 🌹
+========================= */
+
+#fallingFlowers {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+.falling-flower {
+
+    position: absolute;
+
+    top: -80px;
+
+    pointer-events: none;
+
+    animation:
+        flowerFall linear forwards;
+}
+
+
+@keyframes flowerFall {
+
+    0% {
+
+        transform:
+            translateY(-80px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(115vh)
+            rotate(720deg);
+
+        opacity: 0.3;
+    }
+
+}
+
+
+/* =========================
+   الصفحة الرئيسية
+========================= */
+
+.birthday-page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #ead7ff
+        );
+
+}
+
+
+.content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.content > h1 {
+
+    color: #d44886;
+
+    font-size:
+        clamp(30px, 6vw, 50px);
+
+    margin-bottom: 30px;
+
+}
+
+
+.content > p {
+
+    color: #555;
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+
+}
+
+
+.content > h2 {
+
+    color: #d44886;
+
+    margin: 30px 0;
+
+}
+
+
+/* =========================
+   الكروت
+========================= */
+
+.card {
+
+    margin-top: 30px;
+
+    padding: 30px 25px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.1);
+
+}
+
+
+.icon {
+
+    font-size: 60px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.card h2 {
+
+    color: #d44886;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card p {
+
+    color: #555;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+}
+
+
+.card strong {
+
+    color: #9254d6;
+
+}
+
+
+/* =========================
+   الأغنية
+========================= */
+
+.music-box {
+
+    margin-top: 30px;
+
+    padding: 30px 20px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border-radius: 28px;
+
+}
+
+
+.music-box h2 {
+
+    color: #d44886;
+
+    margin-bottom: 20px;
+
+}
+
+
+.music-box audio {
+
+    width: 100%;
+
+    max-width: 600px;
+
+}
+
+
+.music-box p {
+
+    margin-top: 12px;
+
+    color: #666;
+
+}
+
+
+/* =========================
+   الفوتر
+========================= */
+
+.footer {
+
+    margin-top: 35px;
+
+    color: #8a6685;
+
+}
+
+
+/* =========================
+   الموبايل
+========================= */
+
+@media (max-width: 600px) {
+
+    .content > h1 {
+        font-size: 30px;
+    }
+
+    .content > p {
+        font-size: 17px;
+    }
+
+    .card p {
+        font-size: 17px;
+    }
+
+    #countdown {
+        font-size: 95px;
+    }
+
+}
+
+/* ورود حمراء على شاشة الباسورد 🌹 */
+.login-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-box {
+    position: relative;
+    z-index: 20;
+}
+
+.login-page > .falling-flower {
+    position: absolute;
+    top: -80px;
+    pointer-events: none;
+    z-index: 5;
+    animation: loginRoseFall linear forwards;
+}
+
+@keyframes loginRoseFall {
+    0% {
+        transform: translateY(-80px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(115vh) rotate(540deg);
+        opacity: 0.25;
+    }
+}
+
+
+/* =========================
+   التصميم الجديد للموقع
+   ========================= */
+
+/* خلفية خمريّة للموقع كله */
+body {
+    background: #5b1028;
+}
+
+/* شاشة الباسورد */
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(170, 35, 75, .55), transparent 30%),
+        radial-gradient(circle at 85% 85%, rgba(70, 5, 25, .65), transparent 35%),
+        linear-gradient(135deg, #781536, #3d071b);
+}
+
+/* صندوق الباسورد في المنتصف */
+.login-box {
+    width: min(92vw, 470px);
+    padding: 42px 30px;
+    position: relative;
+    z-index: 20;
+    background: rgba(255, 220, 232, .94);
+    border: 2px solid rgba(255,255,255,.45);
+    border-radius: 30px;
+    box-shadow: 0 20px 70px rgba(0,0,0,.35);
+}
+
+/* الموقع الرئيسي */
+.birthday-page {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 55px 18px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(184, 42, 83, .65), transparent 28%),
+        radial-gradient(circle at 90% 90%, rgba(61, 7, 27, .75), transparent 35%),
+        linear-gradient(135deg, #781536, #4a0a22 55%, #300516);
+}
+
+/* المحتوى في منتصف الشاشة وبعرض كبير */
+.birthday-content {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    padding: 38px 22px;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+}
+
+/* العنوان والكلام */
+.birthday-content h1 {
+    color: #ffd7e5;
+    font-size: clamp(42px, 7vw, 72px);
+    margin: 12px 0;
+    text-align: center;
+}
+
+.birthday-content h2 {
+    color: #ffe2ec;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 15px 0;
+    text-align: center;
+}
+
+.birthday-content .top-text,
+.birthday-content .main-message {
+    width: 100%;
+    max-width: 950px;
+    margin: 18px auto;
+    color: #ffe8f0;
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 2.1;
+    text-align: center;
+}
+
+/* خط فاصل */
+.birthday-content .line {
+    width: min(80%, 650px);
+    height: 3px;
+    margin: 22px auto;
+    border-radius: 10px;
+    background: linear-gradient(90deg, transparent, #ffb3cc, transparent);
+}
+
+/* الكروت على عرض الصفحة */
+.birthday-content .card,
+.birthday-content .special-card,
+.birthday-content .call-me,
+.birthday-content .music-box {
+    width: min(100%, 900px);
+    margin: 28px auto;
+    text-align: center;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.28);
+}
+
+.birthday-content .card {
+    padding: 30px 25px;
+    background: rgba(255, 205, 222, .91);
+    color: #5b1830;
+}
+
+.birthday-content .special-card {
+    padding: 32px 25px;
+    background: rgba(255, 188, 211, .93);
+    color: #5b1830;
+}
+
+.birthday-content .card h3,
+.birthday-content .special-card h3 {
+    color: #7d163c;
+    font-size: 25px;
+    margin: 10px 0 15px;
+}
+
+.birthday-content .card p,
+.birthday-content .special-card p {
+    color: #5b1830;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+}
+
+.birthday-content .card strong {
+    color: #8f1744;
+}
+
+/* رسالة كلميني */
+.birthday-content .call-me {
+    padding: 25px 20px;
+    background: rgba(116, 18, 55, .82);
+    border: 1px solid rgba(255,190,210,.4);
+    color: #ffe5ee;
+}
+
+.birthday-content .call-me h2 {
+    color: #ffd3e1;
+}
+
+.birthday-content .call-me p {
+    color: #ffe8f0;
+}
+
+/* الأغنية */
+.birthday-content .music-box {
+    padding: 28px 20px;
+    background: rgba(255, 205, 222, .92);
+    color: #5b1830;
+}
+
+.birthday-content .music-box h3 {
+    color: #7d163c;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.birthday-content .music-box audio {
+    width: min(100%, 700px);
+}
+
+.birthday-content .music-box p {
+    color: #6c2740;
+}
+
+/* زر المفاجأة */
+.birthday-content .surprise-button {
+    display: block;
+    width: min(100%, 600px);
+    margin: 28px auto;
+    padding: 17px 25px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #e65b88, #9f214e);
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* الرسالة الأخيرة */
+.birthday-content .extra-message {
+    width: min(100%, 900px);
+    margin: 25px auto;
+    padding: 30px 22px;
+    border-radius: 28px;
+    background: rgba(255, 188, 211, .94);
+    color: #5b1830;
+    text-align: center;
+}
+
+.birthday-content .extra-message p {
+    color: #5b1830;
+    line-height: 2;
+}
+
+/* الفوتر */
+.birthday-content .footer {
+    color: #ffd6e4;
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* ورود حمراء على شاشة الباسورد */
+.login-page > .falling-flower {
+    position: absolute;
+    top: -90px;
+    pointer-events: none;
+    z-index: 5;
+    animation: loginRoseFall linear forwards;
+}
+
+@keyframes loginRoseFall {
+    0% {
+        transform: translateY(-90px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(115vh) rotate(600deg);
+        opacity: .3;
+    }
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+    .birthday-page {
+        padding: 35px 12px;
+    }
+
+    .birthday-content {
+        padding: 25px 10px;
+    }
+
+    .birthday-content .card,
+    .birthday-content .special-card,
+    .birthday-content .call-me,
+    .birthday-content .music-box {
+        width: 100%;
+        padding: 24px 16px;
+    }
+
+    .birthday-content .main-message,
+    .birthday-content .card p,
+    .birthday-content .special-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* الرسالة الإضافية مخفية لحد ما يتم الضغط على الزر */
+#extraMessage {
+    display: none;
+}
